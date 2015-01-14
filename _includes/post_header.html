@@ -1,0 +1,17 @@
+{% include disqus.js %}
+
+<div class="row">
+	<div class="col-md-9">
+		<p><h1>{{ page.title }}</h1></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-9">
+		<strong>{{ page.author }}</strong>, {{ page.date | date: "%Y-%m-%d" }}<!--<small>, <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}">Comments</a></small>--><br/>
+		{% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a> {% if forloop.last != true %} {% endif %} {% endfor %}
+	</div>
+	<div class="col-md-9">
+		<p class="pull-right">{% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><i class="icon-chevron-left"></i></a> 	{% endif %}   {% if page.next.url %} 	<a href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><i class="icon-chevron-right"></i></a> 	{% endif %} </p>
+	</div>
+</div>
+<hr/>
