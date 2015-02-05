@@ -7,7 +7,11 @@
 </div>
 <div class="row">
 	<div class="col-md-9">
-		<strong>{{ page.author }}</strong>, {{ page.date | date: "%Y-%m-%d" }}<!--<small>, <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}">Comments</a></small>--><br/>
+		<small><b>{{ page.author }}</b>, {{ page.date | date: "%Y-%m-%d" }}</small>
+<p><div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="false"></div>
+   <script type="IN/Share" data-url="{{ site.url }}{{ page.url }}" data-counter="right"></script>
+   <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}">Tweet</a>
+   </p>
 		{% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a> {% if forloop.last != true %} {% endif %} {% endfor %}
 	</div>
 	<div class="col-md-9">
