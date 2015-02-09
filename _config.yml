@@ -1,0 +1,4 @@
+---
+markdown: rdiscount
+permalink: /blog/:title
+url: http://www.briskat.com
