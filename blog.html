@@ -1,0 +1,12 @@
+---
+layout: layout
+---
+<div class="row">
+	<div class="col-lg-12"><h3 class="page-header"></h3>
+	</div>
+</div>
+{% for post in site.posts offset: 0 limit: 50 %}
+<div class="row">
+</div>
+<hr/>
+{% endfor %}
