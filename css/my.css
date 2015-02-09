@@ -1,5 +1,17 @@
 body{padding: 56px 0px 0px 0px;
 }
+.navbar-brand{
+	background-image: url('/img/logo-s.png');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 90px;
+	margin: 3px 0px 0px 3px;
+}
+.navbar-nav>.acmenu {
+	background-color:#CCCCCC;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+}
 h1,h2,h3,h4 {
 	font-family: 'Oswald', sans-serif;
 }
