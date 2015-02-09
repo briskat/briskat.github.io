@@ -1,10 +1,11 @@
 body{padding: 56px 0px 0px 0px;
+font-size: 200%;
 }
 .navbar-brand{
 	background-image: url('/img/logo-s.png');
 	background-repeat: no-repeat;
-	padding: 0px 0px 0px 90px;
-	margin: 3px 0px 0px 3px;
+	padding: 0px 0px 0px 150px;
+	margin: 5px 0px 0px 5px;
 }
 .navbar-nav>.acmenu {
 	background-color:#CCCCCC;
