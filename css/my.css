@@ -1,0 +1,17 @@
+body{padding: 56px 0px 0px 0px;
+}
+h1,h2,h3,h4 {
+	font-family: 'Oswald', sans-serif;
+}
+header {
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-repeat: none;
+    padding: 10px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
