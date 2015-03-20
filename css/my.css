@@ -36,3 +36,4 @@ header {
 .panel-heading a.collapsed:after {
     content:"\e080";
 }
+.fb_iframe_widget span { vertical-align: text-bottom; float: left; }
