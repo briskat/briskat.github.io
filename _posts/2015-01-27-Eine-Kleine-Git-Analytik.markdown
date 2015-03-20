@@ -5,6 +5,7 @@ excerpt: It's time to make some real example. We will show you tiny application 
 categories: /img/posts/3_gitcharts_sm.png
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: AWS database github git gitcharts MIADB
+thumbups: 54
 image: 3_gitcharts_sm.png
 ---
 <p>

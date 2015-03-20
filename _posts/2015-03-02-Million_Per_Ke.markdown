@@ -5,7 +5,7 @@ excerpt: Have you ever asked how many can we do per ke? We perform a simple test
 categories: /img/posts/4_clock.png
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: AWS gitcharts ke MIADB 
-thumbups: 0
+thumbups: 25
 image: 4_clock.png
 ---
 <p>The <a href="http://en.wikipedia.org/wiki/Ke_%28unit%29" target="_blank">ke</a> is a traditional Chinese unit of decimal time.

@@ -4,6 +4,7 @@ title: Inside the Data Industry
 excerpt: Data industry is moving fast and there is fierce competition in the field. There are thriving businesses in this industry and the reason for this is the expansion of all sorts of IT devices which produce huge amount of data.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: AWS database OLAP OLTP SaaS
+thumbups: 31
 image: 1_inside.png
 ---
 <div class="row">
