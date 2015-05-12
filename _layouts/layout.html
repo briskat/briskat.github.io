@@ -12,6 +12,7 @@
 	<meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}Briskat, Database for Interactive Analytics{% endif %}">
 	<meta property="og:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}Interactive user experience in analytics. Multiuser Interactive Analytical database{% endif %}">
 	<meta property="og:site_name" content="Briskat">
+{% if page.image %}<meta property="og:image" content="{{ site.url }}/img/posts/{{page.image}}">{% endif %}
 
 	<link rel="stylesheet" href="/bs_3_2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/my.css"> <!-- customize bootstrap here ! -->
