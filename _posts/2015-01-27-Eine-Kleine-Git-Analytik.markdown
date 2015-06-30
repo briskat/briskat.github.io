@@ -79,8 +79,7 @@ there were 359 commits for the last 22 days in the Ruby on Rails project.
 You can surely think about many other reports but for demonstration purposes
 we put just a few of them.
 <center>
-<a class="btn btn-success btn-lg" href="http://gitcharts.briskat.com:8080/dashboard/Rails?days=5" role="button" target="_blank">
-<span class="glyphicon glyphicon glyphicon-stats" aria-hidden="true"></span> Try Gitcharts</a>
+<a class="btn btn-success btn-lg" href="http://gitcharts.briskat.com" role="button">Try Gitcharts</a>
 </center>
 </p>
 
