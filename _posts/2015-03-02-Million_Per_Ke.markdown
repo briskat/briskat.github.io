@@ -13,7 +13,7 @@ That is 864 seconds which equals to 14 minutes and 24 seconds.
 In this blog post, we will perform a simple <a href="http://en.wikipedia.org/wiki/Stress_testing" target="_blank">stress test</a>
 to determine a safe usage limit of our <a href="/index.html#TECHNOLOGY" target="_blank">MIA database</a>.
 We want to know the maximum number of requests that can be safely served in a second by MIA DB.
-We will simulate user requests that come from our <a href="http://gitcharts.briskat.com:8080/dashboard/Rails?days=5" target="_blank">Gitcharts analytic</a>.
+We will simulate user requests that come from our <a href="http://gitcharts.briskat.com/dashboard/rails%20(rails)?days=5" target="_blank">Gitcharts analytic</a>.
 This will tell us how MIA DB scales up on modern processors.
 Presumably, we also want to find out how many requests can be served per ke.
 </p>
