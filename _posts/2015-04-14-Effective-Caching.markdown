@@ -7,6 +7,7 @@ excerpt: The caching is integral part of MIA DB design. The reason for it is
     basically have all of it or none of it.
 author: <a href="http://cz.linkedin.com/in/hynekvychodil">Hynek Vychodil</a>
 tags: MIADB performance caching
+thumbups: 100
 image: 5_engine.png
 ---
 <p>

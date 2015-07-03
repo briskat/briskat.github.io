@@ -4,6 +4,7 @@ title: Eine Kleine Git Analytik
 excerpt: It's time to make some real example. We will show you tiny application with real data. Software repositories on GitHub are a good choice for our use case.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: AWS database github git gitcharts MIADB
+thumbups: 56
 image: 3_gitcharts_sm.png
 ---
 <p>

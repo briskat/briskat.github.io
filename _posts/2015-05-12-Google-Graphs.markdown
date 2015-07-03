@@ -4,6 +4,7 @@ title: Interactive Charts with Google Charts
 excerpt: Google is known for its obsession by a speed and they have deep know-how in scalability. Google Charts are used by Google itself and it's battle-proven technology.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: google&#32;charts interactive&#32;analytic performance
+thumbups: 37
 image: 6_dashboard_sm.png
 ---
 <p>Do you agree live charts are more fun?
