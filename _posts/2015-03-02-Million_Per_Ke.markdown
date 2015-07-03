@@ -3,8 +3,7 @@ layout: post
 title: 1,000,000 Per Ke?
 excerpt: Have you ever asked how many can we do per ke? We perform a simple test to determine a safe usage limit of incoming requests for our MIA database.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
-tags: AWS gitcharts ke MIADB 
-thumbups: 0
+tags: AWS gitcharts ke MIADB performance
 image: 4_clock.png
 ---
 <p>The <a href="http://en.wikipedia.org/wiki/Ke_%28unit%29" target="_blank">ke</a> is a traditional Chinese unit of decimal time.
