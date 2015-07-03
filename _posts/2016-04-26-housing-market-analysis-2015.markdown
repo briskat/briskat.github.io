@@ -5,7 +5,7 @@ excerpt: In 2007, the U.K. experienced a housing bubble burst. In this post, we 
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vlad Makovsky</a>
 tags: opendata
 hashtag: opendata, ukpropertyprices, housingbubble
-thumbups: 
+thumbups: 7
 image: 11_ukcrash.png
 ---
 In 2007, the U.K. experienced a housing bubble burst.

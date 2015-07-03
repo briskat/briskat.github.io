@@ -5,6 +5,7 @@ excerpt: In our fifth blog post, we showed how positive effect automatic caching
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: PostgreSQL OLTP OLAP performance
 hashtag: OLTP,OLAP
+thumbups: 19
 image: 7_caution.png
 ---
 <p>In our third <a href="/blog/Eine-Kleine-Git-Analytik">blog post</a>,

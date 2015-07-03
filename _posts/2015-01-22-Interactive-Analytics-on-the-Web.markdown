@@ -4,6 +4,7 @@ title: Interactive Analytics on the Web
 excerpt: Take demographic stats, salary surveys, employee satisfaction, your company sales stats. It all comes down to one people's need - People like to measure.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: database interactive&#32;analytic latency OLTP
+thumbups: 30
 image: 2_world.png
 ---
 <p>

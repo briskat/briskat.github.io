@@ -5,6 +5,7 @@ excerpt: To buy a property of an average price took 5 annual gross incomes in 19
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: interactive&#32;analytic opendata
 hashtag: ukhouseprices, ukpropertyprices, houseprices
+thumbups: 76
 image: 8_raise.png
 ---
 <p>There are things in life that most of us do just once or twice in a lifetime.

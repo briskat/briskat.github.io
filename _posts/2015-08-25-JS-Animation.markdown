@@ -5,6 +5,7 @@ excerpt: This animation made my day.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: google&#32;charts interactive&#32;analytic
 hashtag: googlecharts, houseprices, analytics
+thumbups: 18
 image: 9_btn.png
 ---
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>

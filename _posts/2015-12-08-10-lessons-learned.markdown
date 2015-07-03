@@ -5,6 +5,7 @@ excerpt: Let me share some lessons we learned when using some open datasets.
 author: <a href="http://cz.linkedin.com/pub/vladimir-makovsky/2a/141/141">Vladimir Makovsky</a>
 tags: opendata
 hashtag: opendata, ukpropertyprices, crimedata
+thumbups: 41
 image: 10_opendata.png
 ---
 There has been growing number of open data publicized by governments and local governments.
