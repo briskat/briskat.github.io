@@ -1,0 +1,210 @@
+---
+layout: layout
+title: Interactive map of property sales in London
+excerpt: The big picture of property sales in inner London.
+hashtag: londonpropertyprices, interactivemap
+image: london_imap.png
+---
+{% include social_plugins.js %}
+
+<style>
+.dg select {
+	color: #000;
+	font-size: 140%;
+}
+</style>
+<div class="row">
+	<div class="col-lg-9">
+		<div id="london_map"></div>
+	</div>
+	<div class="col-lg-3">
+		<center><h1>Inner London</h1></center>
+		<div id="controls"></div>
+		<div>
+		<br/>
+		<button type="button" id="help_btn" class="btn btn-success btn-lg" data-toggle="modal" data-target="#mainHelp">
+		Help
+		</button>
+		<a class="btn btn-success btn-lg" href="http://datamatic.co/page/how-to-create-an-interactive-data-analytic-map" role="button" target="_blank">Developer tutorial</a>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<center>
+        <div class="fb-like" data-href="{{ site.url }}{{page.url}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{page.url}}"{% if page.hashtag %} data-hashtags="{{ page.hashtag }}"{% endif %}>Tweet</a>
+        <script type="IN/Share" data-url="{{ site.url }}{{page.url}}" data-counter="right"></script>
+		</center>
+	</div>
+</div>
+<div class="row text-center">
+		<div class="modal fade" id="mainHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title" id="myModalLabel">London house analytics</h2>
+					Property sales in inner London mapped, 1995-2016.
+			  </div>
+			  <div class="modal-body text-left">
+					<ol>
+						<li>Change the metric, year or any other option:
+						<img src="/img/london_h2.png" class="img-responsive center-block" alt="Controls">
+						</li>
+						<li>Change the metric range using the slider (top or bottom):
+						<img src="/img/london_h1.png" class="img-responsive center-block" alt="Controls">
+						</li>
+						<li>Hover over the map to view the metric detail. You can zoom in and drag the map. Go to step no. 1.
+						</li>
+					</ol>
+					<small><i>backend - <a href="http://www.briskat.com">briskat.com</a>, UI - <a href="http://www.datamatic.co" target="_blank">datamatic.co</a>, Contains: Land Registry © Crown copyright 2016, Ordnance Survey data © Crown copyright and database right 2014. Contains Royal Mail data © Royal Mail copyright and database right 2014. Contains National Statistics data © Crown copyright and database right 2014</i>
+					</small>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+</div>
+<script type="text/javascript" src="http://datamatic-public.github.io/api/1/api-1.0.3.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+<script>
+ // render empty datamatic chart
+//var datamatic = new Datamatic("117670017722819924657");
+ var datamatic = new Datamatic("117679446137203558889");
+ var chart = datamatic.chart("0B3wq5VFn9PllTWVUTF9qX0RwbWs", {
+     width: Math.round(0.77*window.screen.availWidth),
+     height: Math.round(0.77*window.screen.availHeight)
+ });
+
+ chart.render(document.getElementById('london_map')).then(requestData);
+
+ // options with default values
+ var options = {
+     metric:2,
+     year: 2016,
+     type: "",
+     age: "",
+     tenure: ""
+ };
+
+ // create control panel
+ var gui = new dat.GUI({ autoPlace: false, width : 300 });
+ var customContainer = document.getElementById('controls');
+ customContainer.appendChild(gui.domElement);
+ // add data type
+  addController(options, 'metric', {
+     "No. of sold properties": 1,
+         "Average price": 2,
+         "Yoy price change": 3
+ });
+ // add year range
+ addController(options, 'year', {
+	 "1995-2016": "",
+	 "2016": 2016,
+	 "2015": 2015,
+	 "2014": 2014,
+	 "2013": 2013,
+	 "2012": 2012,
+	 "2011": 2011,
+	 "2010": 2010,
+	 "2009": 2009,
+	 "2008": 2008,
+	 "2007": 2007,
+	 "2006": 2006,
+	 "2005": 2005,
+	 "2004": 2004,
+	 "2003": 2003,
+	 "2002": 2002,
+	 "2001": 2001,
+	 "2000": 2000,
+	 "1999": 1999,
+	 "1998": 1998,
+	 "1997": 1997,
+	 "1996": 1996,
+	 "1995": 1995
+ });
+ // types
+ addController(options, 'type', {
+     "All": "",
+         "Flat/Mais": 1,
+         "Detached": 2,
+         "Semi-Det": 3,
+         "Terraced": 4
+ });
+ // age
+ addController(options, 'age', {
+     "All": "",
+         "New": 1,
+         "Old": 2
+ });
+
+// tenure
+ addController(options, 'tenure', {
+     "All": "",
+         "Free": 1,
+         "Lease": 2
+ });
+
+ // add controller into dat gui, this uses delayed taks
+ // to prevent firing updates < 50ms
+ function addController() {
+     var controller = gui.add.apply(gui, arguments);
+     var delayedTask = Datamatic.utils.delayTask(requestData)
+     controller.onChange(function () {
+         delayedTask.delay(50)
+     });
+ }
+
+ // requests data from Briskat's API end point and converts options
+ // into  request parameters
+ function requestData() {
+     Datamatic.ajax.json("http://house.briskat.com/api/p/lb_lruk/r/area", {
+         yr: parseInt(options.year),
+         pt: options.type,
+         dim: "pcdistrict",
+         pc: 1,
+         new: options.age,
+         hold: options.tenure
+     }).then(setData);
+ }
+
+ // converts result data into Datamatic data 
+ function setData(data) {
+     var metric = options.metric;
+     chart.setData(data.map(function (item) {
+         return {
+             name: item[0],
+             value: item[metric]
+         }
+     }));
+     
+     if (metric == 1) {
+     	chart.setProperties({
+        	"data-unit":"Properties",
+			"theme": "sakura",
+            "data-formatter":"Integer"
+        });
+     }
+     
+     if (metric == 2) {
+     	chart.setProperties({
+        	"data-unit":"£",
+            // "data-formatter":"Integer"
+			"theme": "green",
+            "data-formatter":"Large number"
+        });
+     }
+     
+     if (metric == 3) {
+     	chart.setProperties({
+        	"data-unit":"%",
+			"theme": "shine",
+            "data-formatter":"Integer"
+        });
+     }
+     
+ }	
+</script>
