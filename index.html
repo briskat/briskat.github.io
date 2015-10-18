@@ -3,131 +3,90 @@ layout: layout
 ---
 
 <section id="APPS">
-<div class="row">
-       <div class="col-md-12">
-               <center><h1><font size="200%">LIVE ANALYTICS</font></h1></center>
+<div class="row text-center">
+       <div class="col-md-12"><h1>LIVE ANALYTICS</h1>
        </div>
 </div>
 <div class="row text-center">
-<h4><i>"Nice data set and analytics on English house prices"</i>, <a href="https://twitter.com/barryhand">@barryhand</a></h4>
+	<small>powered by Briskat <a data-target="#MIADB" href="#MIADB" data-toggle="modal">MIA DB</a></small>
+	<div class="modal fade" id="MIADB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h2 class="modal-title" id="myModalLabel">MIA DB</h2>
+		  </div>
+		  <div class="modal-body text-left">
+				<p>is Multi-user and Multi-tenant Interactive Analytical database developed by Briskat.</p>
+				<p>MIA DB is optimized for <b>high requests throughput</b> and <b>low latency responses</b>.
+				Millions of daily users can analyze a lot of data
+				while getting near-instant responses.</p>
+				<p>Our revolutionary architecture combines concepts from outside
+				world ( e.g. Git, Dropbox, Erlang ) with our previous experience in OLAP industry.
+				</p>
+				<p>Not only it allows to avoid costly manual tunning of queries. It's
+				also designed for frequent data loads, frequent changes in a data model and ad-hoc querying.</p>
+				<p>It enables fast development of various kind of analytics at the same time
+				with scalability and great user experience.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
 </div>
 <div class="row text-center">
-		<!-- <div class="col-md-6">
-				<h2>Git Analytics</h2>
-				<p><i>Explore your code changes</i></p>
-				<a href="http://gcharts.briskat.com">
-				<img src="img/commits.png" class="img-responsive center-block" alt="software project analytics"></a>
-				<p><a class="btn btn-success btn-lg" href="http://gcharts.briskat.com" role="button">Try git analytics</a>
-				</p>
-		</div> -->
 		<div class="col-md-6">
 				<p><a href="http://house.briskat.com">
 				<img src="img/house.png" class="img-responsive center-block" alt="house analytics"></a>
 				</p>
-				<p><b>Property prices development in the last 20 years</b></p>
-				<p><i>jQuery, Google Charts, Leaflet</i></p>
+				<p><b>England house prices</b> <br/><small>recommended by <a href="https://twitter.com/HenryPryor/status/673877440180166656" target="_blank">Henry Pryor</a></small></p>
 		</div>
 		<div class="col-md-6">
-				<p><a href="/london_imap.html">
-				<img src="img/london_imap.png" class="img-responsive center-block" alt="London interactive map"></a>
+				<p><a href="http://gcharts.briskat.com">
+				<img src="img/gcharts.png" class="img-responsive center-block" alt="git charts"></a>
 				</p>
-				<p><b>Interactive map of property sales in London</b></p>
-				<p><i>Read tutorial on <a href="http://datamatic.co/page/how-to-create-an-interactive-data-analytic-map" target="_blank">datamatic.co</a></i></p>
+				<p><b>Git statistics</b></p>
 		</div>
 </div>
+<div class="row text-center">
+       <div class="col-md-12"><h1>DEVELOPER'S CORNER</h1>
+       </div>
+</div>
+<div class="row text-center"><a href="http://datamatic.co/page/how-to-create-an-interactive-data-analytic-map"><img src="img/datamatic.png" class="img-responsive center-block" alt="tutorial">How to create</a> an interactive analytic map</div>
 <div class="row"><div class="col-lg-12"><h3 class="page-header"></h3></div></div>
 </section>
-<section id="TECHNOLOGY">
-<div class="row text-center">
-	<div class="col-md-offset-3 col-md-6">
-	<h1><font size="200%">TECHNOLOGY</font></h1>
-	<p><i>We develop analytic service. Our service is powered by own in-memory database designed for high throughput and low latency responses.
-	On top of our service, Web 2.0 analytic applications can be built.</i></p>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-4">
-		<center><img src="img/fast.png" class="img-responsive" alt="superfast" width="142" height="88">
-		<h3>responses are instant</h3>
-		We allow <b>ad-hoc</b> queries on data with <b>millions of rows</b> an yet each user gets <b>sub-second responses</b>.
-		Such a speed is necessary for a good user experience. 
-		</center>
-	</div>
-	<div class="col-md-4">
-		<center><img src="img/everyone.png" class="img-responsive" alt="everyone" width="131" height="88">
-		<h3>everyone can explore</h3>
-		Our service scales well in a number of concurrent users. <b>Millions of users</b> can use our service daily.
-		</center>
-	</div>
-	<div class="col-md-4">
-		<center><img src="img/lemon.png"  alt="simple ui" width="104" height="88">
-		<h3>building web UI is easier</h3>
-		 Instant responses simplify UI client design and service API. It means less (complicated) code and a faster application development.
-		</center><br/>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-offset-2 col-md-4">
-		<center><img src="img/flexible.png" alt="flexible" width="365" height="88">
-		<h3>all kind of analytics</h3>
-		Our service allows to serve thousands of (different) data schemas. We allow to query any structured data - eg. various kind of retail data, business insights, government open data,... 
-		</center><br/>
-	</div>
-	<div class="col-md-4">
-		<center><img src="img/dollar.png" alt="flexible" width="95" height="88">
-		<h3>scalable analytics is affordable</h3>
-		Our backend service is designed to maximize utilization of common hardware
-		which allows us to make scalable analytics affordable even to small companies.
-	</div>
-</div>
-<br/>
-
-<div class="row">
-	<center>
-	<a class="btn btn-success btn-lg" href="http://www.briskat.com/blog.html" role="button">
-	<span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Read Our Blog </a>
-	</center>
-</div>
-<div class="row"><div class="col-lg-12"><h3 class="page-header"></h3></div></div>
-
 <section id="CONTACT">
 <div class="row text-center">
 	<div class="col-md-4">
-		<h1>CONTACT US</h1>
-	</div>
-	<div class="col-md-4">
+		<h2>OUR STORY</h2>
+		  <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/Dp5jRJPFOiA?showinfo=0&rel=0&autohide=1" style="border: 3px solid #aaa;" allowfullscreen></iframe>
+		<p>
+		<a href="https://www.facebook.com/pages/Briskat/521963701278696"><img src="img/facebook.png" alt="Briskat Facebook" width="30" height="30"></a>
+		<a href="https://www.twitter.com/thebriskat"><img src="img/twitter.png" alt="Briskat Twitter" width="30" height="30"></a>
+		<a href="https://www.linkedin.com/company/briskat"><img src="img/linkedin.png" alt="Briskat LinkedIn" width="30" height="30"></a>
+		<a href="https://www.youtube.com/user/thebriskat"><img src="img/youtube.png" alt="Briskat YouTube" width="30" height="30"></a>
+		</p>
+		<h2>CONTACT US</h2>
 		<h3><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 		ask&commat;<img src="img/logo-s.png" alt="briskat" style="padding-bottom: 11px" width="110" height="58">.com
 		</h3>
 	</div>
-	<div class="col-md-4">
-		<br/>
-		<a href="https://www.facebook.com/pages/Briskat/521963701278696"><img src="img/facebook.jpg" alt="Briskat Facebook" width="30" height="30"></a>
-		<a href="https://www.twitter.com/thebriskat"><img src="img/twitter.png" alt="Briskat Twitter" width="30" height="30"></a>
-		<a href="https://www.linkedin.com/company/briskat"><img src="img/linkedin.png" alt="Briskat LinkedIn" width="30" height="30"></a>
-		&nbsp;<a href="https://www.youtube.com/user/thebriskat"><img src="img/youtube.png" alt="Briskat YouTube" width="72" height="30"></a>
-	</div>
-</div>
-
-<div class="row"><div class="col-lg-12"><h3 class="page-header"></h3></div></div>
-
-<div class="row text-center">
-	<div class="col-md-4">
-		<h1>OUR STORY</h1>
-		  <br/><iframe class="embed-responsive-item" src="http://www.youtube.com/embed/Dp5jRJPFOiA?showinfo=0&rel=0&autohide=1" style="border: 3px solid #aaa;" allowfullscreen></iframe>
-	</div>
 	<div class="col-md-8">
-		<h1>FOUNDERS</h1>
+		<h2>FOUNDERS</h2>
 	<div class="col-md-6">
-	<h2>
-	<a href="https://www.linkedin.com/pub/vladimir-makovsky/2a/141/141"><img src="img/linkedin.png" alt="Vlada" width="20" height="20"></a>
-	Vladimir Makovsky<small>, CEO</small></h2>
+	<h3>
+	<a href="https://www.linkedin.com/pub/vladimir-makovsky/2a/141/141"><img src="img/linkedin.png" alt="Vlada" width="24" height="24"></a>
+	Vladimir Makovsky<small>, CEO</small></h3>
 	<center><img class="img-responsive" src="img/vlada.png" alt="Vlada" width="183" height="225"><br/><center>
+	<p><small>worked as a developer for two succesfull Saas companies Broadbean, GoodData from an early stage.</small></p>
 	</div>
 	<div class="col-md-6">
-	<h2>
-	<a href="https://www.linkedin.com/in/hynekvychodil"><img src="img/linkedin.png" alt="Hynek" width="20" height="20"></a>
-	Hynek Vychodil<small>, CTO</small></h2><center><img class="img-responsive" src="img/hynek.png" alt="Hynek" width="183" height="225"><br/></center>
+	<h3>
+	<a href="https://www.linkedin.com/in/hynekvychodil"><img src="img/linkedin.png" alt="Hynek" width="24" height="24"></a>
+	Hynek Vychodil<small>, CTO</small></h3><center><img class="img-responsive" src="img/hynek.png" alt="Hynek" width="183" height="225"><br/></center>
+	<p><small>is an author of GoodData analytic query language which is used in dashboards in thousands companies.</small></p>
 	</div>
 	</div>
 </div>
