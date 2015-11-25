@@ -3,12 +3,32 @@ layout: layout
 ---
 
 <section id="APPS">
+<br/>
 <div class="row text-center">
-       <div class="col-md-12"><h1>LIVE ANALYTICS</h1>
+       <div class="col-md-12"><h1>Analytics</h1>
        </div>
 </div>
 <div class="row text-center">
-	<small>powered by Briskat <a data-target="#MIADB" href="#MIADB" data-toggle="modal">MIA DB</a></small>
+		<div class="col-md-6">
+				<h3>Gitcharts</h3>
+				<p>Explore anomalies and keep tidy your git repository.</p>
+				<p><a href="http://gcharts.briskat.com">
+				<img src="img/gcharts.png" class="img-responsive center-block" alt="git charts"></a>
+				</p>
+		</div>
+		<div class="col-md-6">
+				<h3>House prices</h3>
+				<p><a href="http://blog.landregistry.gov.uk/spotlight-on-housing-expert-henry-pryor" target="_blank">Used</a> by Henry Pryor, the BBC's favourite property expert.</p>
+				<p><a href="http://house.briskat.com">
+				<img src="img/house.png" class="img-responsive center-block" alt="England and Wales house prices, historic trends."></a>
+				</p>
+		</div>
+</div>
+<div class="row text-center">
+       <div class="col-md-12"><b>Powered by MIA DB</b> - multiuser interactive analytical database. <a data-target="#MIADB" href="#MIADB" data-toggle="modal">Tell me more.</a>
+       </div>
+</div>
+<div class="row text-center">
 	<div class="modal fade" id="MIADB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -17,17 +37,24 @@ layout: layout
 			<h2 class="modal-title" id="myModalLabel">MIA DB</h2>
 		  </div>
 		  <div class="modal-body text-left">
-				<p>is Multi-user and Multi-tenant Interactive Analytical database developed by Briskat.</p>
-				<p>MIA DB is optimized for <b>high requests throughput</b> and <b>low latency responses</b>.
-				Millions of daily users can analyze a lot of data
-				while getting near-instant responses.</p>
-				<p>Our revolutionary architecture combines concepts from outside
+				<p>is <b>M</b>ulti-user (and Multi-tenant) <b>I</b>nteractive <b>A</b>nalytical <b>d</b>ata<b>b</b>ase developed by Briskat.
+				Our revolutionary architecture combines concepts from the outside
 				world ( e.g. Git, Dropbox, Erlang ) with our previous experience in OLAP industry.
+                </p>
+				<p>MIA enables <b>fast development</b> of various kind of analytics. At the same time,
+				it delivers <b>great online user experience</b>, reduces <b>complexity</b>
+				and <b>the total cost</b> of an interactive online analytic solution.
+				Million daily users can easily analyze data while getting near-instant responses.</p>
+				<p>Key design features:
+				<ul>
+					<li>high requests throughput</li>
+					<li>low latency responses</li>
+					<li>ad-hoc querying</li>
+					<li>data agnostic</li>
+					<li>frequent data loads</li>
+					<li>frequent changes in a data model</li>
+				</ul>
 				</p>
-				<p>Not only it allows to avoid costly manual tunning of queries. It's
-				also designed for frequent data loads, frequent changes in a data model and ad-hoc querying.</p>
-				<p>It enables fast development of various kind of analytics at the same time
-				with scalability and great user experience.</p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -36,45 +63,28 @@ layout: layout
 	  </div>
 	</div>
 </div>
-<div class="row text-center">
-		<div class="col-md-6">
-				<p><a href="http://house.briskat.com">
-				<img src="img/house.png" class="img-responsive center-block" alt="house analytics"></a>
-				</p>
-				<p><b>England house prices</b> <br/><small>recommended by <a href="https://twitter.com/HenryPryor/status/673877440180166656" target="_blank">Henry Pryor</a></small></p>
-		</div>
-		<div class="col-md-6">
-				<p><a href="http://gcharts.briskat.com">
-				<img src="img/gcharts.png" class="img-responsive center-block" alt="git charts"></a>
-				</p>
-				<p><b>Git statistics</b></p>
-		</div>
-</div>
-<div class="row text-center">
-       <div class="col-md-12"><h1>DEVELOPER'S CORNER</h1>
-       </div>
-</div>
-<div class="row text-center"><a href="http://datamatic.co/page/how-to-create-an-interactive-data-analytic-map"><img src="img/datamatic.png" class="img-responsive center-block" alt="tutorial">How to create</a> an interactive analytic map</div>
-<div class="row"><div class="col-lg-12"><h3 class="page-header"></h3></div></div>
+<hr/>
 </section>
 <section id="CONTACT">
 <div class="row text-center">
 	<div class="col-md-4">
-		<h2>OUR STORY</h2>
-		  <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/Dp5jRJPFOiA?showinfo=0&rel=0&autohide=1" style="border: 3px solid #aaa;" allowfullscreen></iframe>
+		<p>
+		<h2>Contact us</h2>
+		<h3><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+		ask&commat;<img src="img/logo-s.png" alt="briskat" style="padding-bottom: 11px" width="110" height="58">.com
+		</h3>
+		</p>
 		<p>
 		<a href="https://www.facebook.com/pages/Briskat/521963701278696"><img src="img/facebook.png" alt="Briskat Facebook" width="30" height="30"></a>
 		<a href="https://www.twitter.com/thebriskat"><img src="img/twitter.png" alt="Briskat Twitter" width="30" height="30"></a>
 		<a href="https://www.linkedin.com/company/briskat"><img src="img/linkedin.png" alt="Briskat LinkedIn" width="30" height="30"></a>
 		<a href="https://www.youtube.com/user/thebriskat"><img src="img/youtube.png" alt="Briskat YouTube" width="30" height="30"></a>
 		</p>
-		<h2>CONTACT US</h2>
-		<h3><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-		ask&commat;<img src="img/logo-s.png" alt="briskat" style="padding-bottom: 11px" width="110" height="58">.com
-		</h3>
+		<h3>Our story</h3>
+		  <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/Dp5jRJPFOiA?showinfo=0&rel=0&autohide=1" style="border: 3px solid #aaa;" allowfullscreen></iframe>
 	</div>
 	<div class="col-md-8">
-		<h2>FOUNDERS</h2>
+		<h2>Founders</h2>
 	<div class="col-md-6">
 	<h3>
 	<a href="https://www.linkedin.com/pub/vladimir-makovsky/2a/141/141"><img src="img/linkedin.png" alt="Vlada" width="24" height="24"></a>
@@ -86,10 +96,25 @@ layout: layout
 	<h3>
 	<a href="https://www.linkedin.com/in/hynekvychodil"><img src="img/linkedin.png" alt="Hynek" width="24" height="24"></a>
 	Hynek Vychodil<small>, CTO</small></h3><center><img class="img-responsive" src="img/hynek.png" alt="Hynek" width="183" height="225"><br/></center>
-	<p><small>is an author of GoodData analytic query language which is used in dashboards in thousands companies.</small></p>
+	<p><small>an author of GoodData analytic query language which is used in dashboards in thousands companies including 42% of Fortune 500.</small></p>
 	</div>
 	</div>
 </div>
 </section>
 
-<div class="row"><div class="col-lg-12"><h3 class="page-footer"></h3></div></div>
+<hr/>
+<div class="row text-center">
+       <div class="col-md-4 text-center"><h2>Developer's corner</h2>
+		<a href="http://datamatic.co/page/how-to-create-an-interactive-data-analytic-map"><img src="img/datamatic.png" class="img-responsive center-block" alt="tutorial">How to create<br/></a> an interactive analytic map
+       </div>
+       <div class="col-md-4 text-center"><h2>Interview for</h2>
+		<a href="http://blog.landregistry.gov.uk/price-paid-data-briskat-common-guest-blog"><img src="img/lr.png" class="img-responsive center-block" alt="tutorial"></a>
+       </div>
+       <div class="col-md-3 text-center"><h2>Our latest blog</h2>
+		<a href="/blog/housing-market-after-bubble">UK 2007 housing bubble – Analysis 9 years on</a>
+       </div>
+       <div class="col-md-1 text-center">
+        <br/><br/><img src="/img/posts/11_ukcrash.png" class="img-responsive center-block" alt="UK housing bubble in 2007">
+       </div>
+</div>
+<hr/>
