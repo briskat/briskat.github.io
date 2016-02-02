@@ -1,5 +1,6 @@
 body{padding: 56px 0px 0px 0px;
-font-size: 160%;
+font-size: 230%;
+font-family: 'Segoe UI Light',serif,sans-serif;
 }
 .navbar-brand{
 	background-image: url('/img/logo-s.png');
@@ -14,7 +15,11 @@ font-size: 160%;
 	-webkit-border-radius:7px;
 }
 h1,h2,h3,h4 {
-	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	padding-top: 20px;
+}
+p {
+	padding: 9px;
 }
 header {
     color: #fff;
