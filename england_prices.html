@@ -1,0 +1,150 @@
+---
+layout: full
+title: Historical property prices in England and Wales since 1996
+excerpt: Historical property prices in England and Wales
+hashtag: propertyprices, england, wales
+image: 8_raise.png
+---
+{% include social_plugins.js %}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load('visualization', '1.0', {'packages':['corechart']});
+google.setOnLoadCallback(initMe);
+
+var GS;
+var Year = 2016;
+var Max = 1200000;
+var paused = 0;
+
+function getActiveOpts (div) {
+    var e = document.getElementById(div);
+    var idx = e.selectedIndex < 0 ? 0 : e.selectedIndex;
+    return e.options[idx].value;
+}
+
+function initMe() {
+	GS=new google.visualization.BubbleChart(document.getElementById('bubble_div'));
+	$("#play_btn").click(function() {
+        if ( Year == 2016 ) {
+            Year = 1996;
+        }
+        paused = 0;
+		$("#play_btn").hide();
+		$("#pause_btn").show();
+        var area = getActiveOpts("pc_opt");
+        var ptype = getActiveOpts("pt_opt");
+        if ( area == "" || area == 1 || area == 11 ) {
+            Max = 1500000;
+        } else {
+            Max = 600000;
+        }
+        if (ptype == 1) {
+            if ( area == "" || area == 1 || area == 11 ) {
+                Max = 3000000;
+            } else if ( area == 12 || area == 16 ) {
+                Max = 1000000;
+            }
+        }
+		setTimeout(refresh, 10);
+	});
+	$("#pause_btn").click(function() {
+        paused = 1;
+		$("#play_btn").show();
+		$("#pause_btn").hide();
+		Year = Year - 1;
+		setTimeout(refresh, 10);
+	});
+    $("#pause_btn").hide();
+}
+
+function switchColumns(jsonData,header,fields) {
+	var body = $.map(jsonData, function(n,i){
+				   var row = new Array();
+				   row.push(n[0]);
+				   for ( var idx in fields ) {
+					   row.push(Math.round(n[fields[idx]]));
+				   }
+				   return [row];
+			   });
+
+	return header.concat(body);
+}
+
+function drawGraph(Graph,Year) {
+		var Data = $.ajax({
+			url: "http://house.briskat.com/api/p/lb_lruk/r/area?pc=" 
+                + getActiveOpts("pc_opt") + "&pt=" + getActiveOpts("pt_opt") 
+                + "&yr=" + Year,
+			dataType: "json",
+			async: false
+		}).responseJSON;
+
+		var Table = google.visualization.arrayToDataTable(switchColumns(
+						Data,
+						[['Post Code', 'Average price £','Avg price changed YoY (%)','Properties sold','Properties sold']],
+						[2,3,1,1]
+					));
+		Graph.draw(Table,
+				   { title: 'Year ' + Year,
+                     titleTextStyle: {fontSize: '40', fontWidth: 'normal'},
+					 hAxis: {title: 'Average price paid £',
+							  viewWindowMode:'explicit',
+							  viewWindow:{
+								max: Max,
+								min: 0
+							  },
+                      format: "£0,000"
+				    },
+					 vAxis: {title: 'Year over year avg. price % change',
+					  viewWindowMode:'explicit',
+					  viewWindow:{
+						max:50,
+						min:-30
+					  },
+                      format: "#\'%\'"
+					 },
+					 animation:{
+						 "startup": true,
+						  duration: 1000,
+						  easing: 'inAndOut'
+					}
+				  });
+}
+
+function refresh() {
+	drawGraph(GS,Year);
+	if ( Year < 2016 && paused == 0 ) {
+		Year = Year + 1;
+		setTimeout(refresh, 1100);
+	} else {
+		$("#play_btn").show();
+		$("#pause_btn").hide();
+	}
+}
+</script>
+<style>
+.vh70{ height: 75vh }
+</style>
+<div class="text-center" width="100%">
+    <h2>Nominal average property prices in England and Wales, <small>by year and postcode area, since 1996</small></h2>
+    <div class="btn-group" role="group">
+        <select id="pc_opt" class="btn btn-default dropdown-toggle btn-block"><option value="">all postcodes</option><option value="1">Inner London</option><option value="2">all but Inner London</option></optgroup><optgroup label="approximated region"><option value="11">London + adjacent areas</option><option value="12">East Midlands</option><option value="13">East of England</option><option value="14">North East</option><option value="15">North West</option><option value="16">South East</option><option value="17">South West</option><option value="18">West Midlands</option><option value="19">Yorkshire</option><option value="20">Wales</option></optgroup>
+        </select>
+    </div>
+    <div class="btn-group" role="group">
+        <select id="pt_opt" class="btn btn-default dropdown-toggle btn-block">
+            <option value="">all types</option><option value="2">flat</option><option value="1">detach.</option><option value="3">semidt.</option><option value="4">terrace</option>
+        </select>
+    </div>
+    <button id="play_btn" type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+    <button id="pause_btn" type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button>
+    <div id="bubble_div" class="vh70"></div>
+</div>
+	<div class="col-lg-12">
+		<center>
+        <div class="fb-like" data-href="{{ site.url }}{{page.url}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{page.url}}"{% if page.hashtag %} data-hashtags="{{ page.hashtag }}"{% endif %}>Tweet</a>
+        <script type="IN/Share" data-url="{{ site.url }}{{page.url}}" data-counter="right"></script>
+		</center>
+	</div>

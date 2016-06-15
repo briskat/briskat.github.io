@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{page.title}}{% else %}Briskat, Database for Interactive Analytics{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}Incredibly fast analytical database as a service.{% endif %}">
+    <meta name="author" content="briskat">
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}Briskat, Database for Interactive Analytics{% endif %}">
+	<meta property="og:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}Incredibly fast analytic database as a service. Scalable, agnostic, easy to integrate with.{% endif %}">
+	<meta property="og:site_name" content="Briskat">
+{% if page.image %}<meta property="og:image" content="{{ site.url }}/img/posts/{{page.image}}">{% endif %}
+
+	<link rel="stylesheet" href="/bs_3_3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/my.css"> <!-- customize bootstrap here ! -->
+
+  </head>
+<body>
+{% include navigation.html %}
+
+{{ content }}
+
+{% include footer.html %}
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/bs_3_3/js/bootstrap.min.js"></script>
+  </body>
+</html>
